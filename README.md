@@ -47,7 +47,7 @@ This system was developed with the following key objectives:
 - **Boarding pass generation** with complete travel and passenger details
 - Detailed **booking history with timestamps**
 
----
+
 
 ### Admin Panel
 
