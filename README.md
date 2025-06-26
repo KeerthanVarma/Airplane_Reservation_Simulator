@@ -80,24 +80,29 @@ Each data structure is carefully selected based on its average-case performance 
 ```
 /Airplane-Reservation-Simulator
 ├── /include
-│ ├── BookingSystem.h
-│ ├── Flight.h
-│ ├── Passenger.h
 │ ├── Admin.h
-│ ├── Pricing.h
 │ ├── BoardingPass.h
+│ ├── BookingSystem.h
+| ├── Flight.h
 │ ├── LoginManager.h
+│ ├── Pricing.h
+│ ├── Passenger.h
+│ ├── RouteManager.h
+| ├── VoiceAssistant.h
 ├── /src
-│ ├── BookingSystem.cpp
-│ ├── Flight.cpp
-│ ├── Passenger.cpp
 │ ├── Admin.cpp
-│ ├── Pricing.cpp
 │ ├── BoardingPass.cpp
+│ ├── BookingSystem.cpp
+| ├── Flight.cpp
 │ ├── LoginManager.cpp
-├── main.cpp
-├── flights.txt
+│ ├── Pricing.cpp
+│ ├── Passenger.cpp
+│ ├── RouteManager.cpp
+| ├── VoiceAssistant.cpp
+├── admin_credentials.txt
 ├── bookings.txt
+├── flights.txt
+├── main.cpp
 ├── README.md
 ```
 
@@ -137,60 +142,6 @@ Unlike many existing reservation simulators, this project:
 Its clean modular structure also makes it an excellent reference for learning system design, data handling, and CLI application development in C++.
 
 ---
-## Testing Examples
-
-###  1. Successful Passenger Booking
-```
-**Input:**
-```
-```
-Aadhaar: 123456789012
-Source: Mumbai
-Destination: Delhi
-Date: 2025-07-15
-Flight: MumDel03
-Seat: 14D
-Name: Ashwini
-Age: 37
-Gender(M/F): F
-Confirm: yes
-```
-```
-**Output:**
-```
-```
-Booking Successful.
-Boarding Pass Generated:
-Name: Ashwini | Seat: 14D | Flight: MumDel03 | Date: 2025-07-15
-```
-
----
-
-###  2. Invalid Aadhaar Number
-```
-**input**
-Aadhaar: 1234
-→ Error: Aadhaar number must be exactly 12 digits.
-Again waits for the valid aadhar prompt.
-```
-
----
-
-###  3. Non-Numeric Age Entry
-```
-Age: twenty-five
-→ Error: Age must be a valid number.
-Again waits for the valid age prompt.
-```
-
----
-
-###  4. Seat Already Booked
-```
-Seat: 10B
-→ Error: Booking failed! Seat 10B is already booked.
-Returns to the main menu.
-```
 
 ## Contribution Guidelines
 
