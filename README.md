@@ -163,6 +163,35 @@ Booking Successful.
 Boarding Pass Generated:
 Name: Ashwini | Seat: 14D | Flight: MumDel03 | Date: 2025-07-15
 ```
+
+---
+
+###  2. Invalid Aadhaar Number
+```
+**input**
+Aadhaar: 1234
+→ Error: Aadhaar number must be exactly 12 digits.
+Again waits for the valid aadhar prompt.
+```
+
+---
+
+###  3. Non-Numeric Age Entry
+```
+Age: twenty-five
+→ Error: Age must be a valid number.
+Again waits for the valid age prompt.
+```
+
+---
+
+###  4. Seat Already Booked
+```
+Seat: 10B
+→ Error: Booking failed! Seat 10B is already booked.
+Returns to the main menu.
+```
+
 ## Contribution Guidelines
 
 This project was developed independently as a demonstration of advanced programming concepts. However, contributions, suggestions, and pull requests are welcome.
