@@ -1,10 +1,24 @@
 # Airplane_Reservation_Simulator
-# Domestic Airline Reservation Simulator
 
-The **Domestic Airline Reservation Simulator** is a command-line based system developed entirely in **Modern C++ (C++17)**. It simulates the core operations of a domestic airline reservation platform, incorporating robust **Object-Oriented Design Principles**, **Data Structure Optimization**, and **real-world airline workflow** simulation. This project offers both passenger- and admin-facing functionalities with high levels of modularity, validation, and persistence.
+The **Domestic Airplane Reservation Simulator** is a command-line based system developed entirely in **Modern C++ (C++17)**. It simulates the core operations of a domestic airline reservation platform, incorporating robust **Object-Oriented Design Principles**, **Data Structure Optimization**, and **real-world airline workflow** simulation. This project offers both passenger- and admin-facing functionalities with high levels of modularity, validation, and persistence.
 
 ---
+## Table of Contents
 
+- [Project Overview](#project-overview)
+- [Key Features](#key-features)
+  - [Passenger Module](#passenger-module)
+  - [Admin Panel](#admin-panel)
+- [Technical Architecture](#technical-architecture)
+- [Project Structure](#project-structure)
+- [Data Persistence](#data-persistence)
+- [Input Validation & Error Handling](#input-validation--error-handling)
+- [Distinctive Aspects](#distinctive-aspects)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Conclusion](#conclusion)
+- [Author Information](#author-information)
+
+---
 ## Project Overview
 
 This system was developed with the following key objectives:
@@ -64,7 +78,7 @@ Each data structure is carefully selected based on its average-case performance 
 
 ## Project Structure
 ```
-/Airline-Reservation-Simulator
+/Airplane-Reservation-Simulator
 ├── /include
 │ ├── BookingSystem.h
 │ ├── Flight.h
