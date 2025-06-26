@@ -1,72 +1,69 @@
 # Airplane_Reservation_Simulator
+# Domestic Airline Reservation Simulator
 
-
-Welcome to the **Domestic Airline Reservation Simulator**, a command-line based flight booking system designed using **C++**, **Object-Oriented Programming**, and **efficient Data Structures**. This project aims to simulate the core functionalities of a domestic airline's reservation and management system with real-time validation, seat visualization, booking persistence, admin control, and more.
-
----
-
-##  Project Highlights
-
-- **Built from Scratch in Advanced C++**
-- **OOP Design** for modularity and scalability
-- **Efficient Use of DSA**: maps, vectors, queues, priority queues, unordered maps, etc.
-- **Seat Booking with Live Visualization**
-- **Aadhaar-based Login System for Passengers**
-- **Admin Panel for Monitoring and Control**
-- **Real-time Fare Calculation & Refund Engine**
-- **Persistent Data Storage using File Handling**
-- **Voice Feedback Integration** using simple TTS
-- **Boarding Pass Generation**
-- **Booking History with Time Stamps**
+The **Domestic Airline Reservation Simulator** is a command-line based system developed entirely in **Modern C++ (C++17)**. It simulates the core operations of a domestic airline reservation platform, incorporating robust **Object-Oriented Design Principles**, **Data Structure Optimization**, and **real-world airline workflow** simulation. This project offers both passenger- and admin-facing functionalities with high levels of modularity, validation, and persistence.
 
 ---
 
-## 🛠 Features in Detail
+## Project Overview
 
-###  Passenger Side
+This system was developed with the following key objectives:
 
-- **Login via Aadhaar number (with validation)**
-- Search flights by **source, destination, and date**
-- View available flights with **live seat map (40x6 layout)**
-- **Book tickets** with:
-  - Name, Age, Gender, Seat Selection
-  - Seat confirmation with input correction support
-- **Cancel tickets** with dynamic refund calculation:
-  - Full refund before 7 days
-  - 50% within a week
-  - No refund on the day
-- **Boarding Pass Generation**
-  - Displays passenger name, flight ID, seat, and flight details
-- View **booking history** and **past flight info**
+- Comprehensive airline reservation simulation
+- Modular and scalable system design
+- Efficient runtime performance using STL containers
+- Seamless data persistence across sessions
+- Robust input validation and exception-safe coding practices
 
 ---
 
-### 🛫 Admin Panel
+## Key Features
 
-- Login with **username/password**
-- View all **flights with statistics**
-- Check **occupancy and revenue**
-- View **all bookings with seat info**
-- View **waitlist and boarding queue**
-- Data updated **live with every booking or cancellation**
+### Passenger Module
 
----
-
-## ⚙️ Data Structures & Optimization
-
-This project doesn’t just simulate logic—it’s built with **real performance** in mind. We used:
-
-- `std::map`, `std::unordered_map` — for fast access to flights, bookings, and passenger info
-- `std::vector` — for dynamic storage of seats, passengers
-- `std::queue`, `std::priority_queue` — for waitlisting and age-priority boarding queues
-- `std::set` — to prevent duplicate bookings (Aadhaar-based)
-- `std::chrono` and `std::tm` — for real-time booking and refund logic
-
-All operations are optimized to minimize runtime, reduce lookup times, and simulate real-world airline data processing.
+- **Secure Aadhaar-based Login** with 12-digit validation
+- Search available flights by **source**, **destination**, and **date**
+- **Live seat visualization** using a 40x6 seating layout
+- Interactive ticket booking with input confirmation and correction
+- Real-time **fare calculation** and seat availability checks
+- **Ticket cancellation** with automated refund policy:
+  - Full refund if canceled more than 7 days before the journey
+  - 50% refund if canceled within 7 days
+  - No refund on the day of travel
+- **Boarding pass generation** with complete travel and passenger details
+- Detailed **booking history with timestamps**
 
 ---
 
-##  File Structure
+### Admin Panel
+
+- **Username and password-based login**
+- View and manage all available flights
+- Access **real-time occupancy** and **revenue reports**
+- Display all booking records with seat-level details
+- Monitor **waitlisted passengers** and **priority boarding queues**
+- All changes reflect instantly across modules
+
+---
+
+## Technical Architecture
+
+The simulator emphasizes performance and clean architecture by leveraging the following:
+
+|      Component          |      Implementation Strategy        |
+|-------------------------|-------------------------------------|
+| Data Access             | `std::map`, `std::unordered_map`    |
+| Dynamic Collections     | `std::vector`                       |
+| Queuing Systems         | `std::queue`, `std::priority_queue` |
+| Unique Data Constraints | `std::set`                          |
+| Time and Date Handling  | `std::chrono`, `std::tm`            |
+
+Each data structure is carefully selected based on its average-case performance characteristics to ensure minimal time complexity across key operations.
+
+---
+
+## Project Structure
+```
 /Airline-Reservation-Simulator
 ├── /include
 │ ├── BookingSystem.h
@@ -88,54 +85,77 @@ All operations are optimized to minimize runtime, reduce lookup times, and simul
 ├── flights.txt
 ├── bookings.txt
 ├── README.md
+```
 
 ---
 
-##  Data Persistence
+## Data Persistence
 
-- Bookings are stored in `bookings.txt`
-- Flight data stored in `flights.txt`
-- All data is **retained** between sessions
-- No crashes on invalid input — full **input validation** throughout
-
----
-
-##  Security & Input Handling
-
-- Every input is validated (age, seat, gender, Aadhaar)
-- If invalid data is entered, users are **reprompted only for that field**
-- Aadhaar input is enforced to be 12-digit only
-- **Case-insensitive** city matching for source/destination
+- Booking data is maintained in `bookings.txt`
+- Flight metadata is stored in `flights.txt`
+- All records persist between executions
+- All inputs undergo thorough validation
+- Incorrect entries are gracefully handled and re-prompted at the field level
 
 ---
 
-##  Why This Project is Different
+## Input Validation & Error Handling
 
-> Many airline simulators exist — but **few are built from scratch** using only core **C++ with DSA**, no external libraries, and a **fully modular OOP structure**.
+This system applies rigorous validation at every point of user interaction:
 
-We aimed to build a system that:
-- Is **educationally rich**
-- Is **functionally complete**
-- Emphasizes **time and space efficiency**
-- Supports **scaling and real-world simulation**
-
-You’ll find this project useful whether you’re a student, interviewer, or systems designer.
+- Aadhaar must be exactly 12 digits
+- City names are matched case-insensitively
+- Invalid data types or out-of-range values trigger contextual prompts without system termination
+- Users can revise inputs interactively before confirmation
+- Gender selection and age are type-checked and restricted to valid entries
 
 ---
 
-##  Contributing
+## Distinctive Aspects
 
-This project is built solo as a passion project, but contributions and suggestions are welcome. Fork it, build on top of it, or just explore the logic.
+Unlike many existing reservation simulators, this project:
+
+- Is **entirely developed from scratch in C++17** without reliance on external libraries
+- Implements **pure Object-Oriented Design** with minimal coupling and high cohesion
+- Prioritizes **algorithmic efficiency** and **data integrity**
+- Provides a **realistic, user-friendly experience** on both passenger and administrative fronts
+
+Its clean modular structure also makes it an excellent reference for learning system design, data handling, and CLI application development in C++.
 
 ---
 
-##  Final Words
+## Contribution Guidelines
 
-This project was built with real effort, debugging, and iterative improvements. It's more than just code — it's a representation of applied OOP, DSA, and software engineering fundamentals. Hope you enjoy it!
+This project was developed independently as a demonstration of advanced programming concepts. However, contributions, suggestions, and pull requests are welcome.
+
+- Fork the repository
+- Create feature branches for enhancements or bug fixes
+- Ensure your changes align with the modular class design and file structure
+- Submit a pull request with a detailed description of modifications
 
 ---
 
-> **Author**: Keerthan Varma  
-> **Institution**: IIT Gandhinagar  
-> **Language**: C++17  
-> **Platform**: Windows (MinGW)
+## Conclusion
+
+The **Domestic Airline Reservation Simulator** represents a culmination of applied data structures, system design principles, and object-oriented programming. Its architecture allows seamless extension and adaptation to broader scopes such as international travel systems, payment gateways, and customer tiering.
+
+The system emphasizes:
+
+- **Practical implementation of core CS principles**
+- **Scalable structure** for real-world adaptation
+- **Robust validation mechanisms**
+- **Comprehensive simulation of airline reservation systems**
+
+---
+
+## Author Information
+
+**Keerthan Varma**  
+B.Tech, Indian Institute of Technology Gandhinagar  
+Language: C++17  
+Platform: Windows (MinGW)  
+
+
+---
+
+> *"A well-architected system is more than code; it is the embodiment of clarity, correctness, and creativity."*
