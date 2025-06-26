@@ -137,7 +137,32 @@ Unlike many existing reservation simulators, this project:
 Its clean modular structure also makes it an excellent reference for learning system design, data handling, and CLI application development in C++.
 
 ---
+## Testing Examples
 
+###  1. Successful Passenger Booking
+```
+**Input:**
+```
+```
+Aadhaar: 123456789012
+Source: Mumbai
+Destination: Delhi
+Date: 2025-07-15
+Flight: MumDel03
+Seat: 14D
+Name: Ashwini
+Age: 37
+Gender(M/F): F
+Confirm: yes
+```
+```
+**Output:**
+```
+```
+Booking Successful.
+Boarding Pass Generated:
+Name: Ashwini | Seat: 14D | Flight: MumDel03 | Date: 2025-07-15
+```
 ## Contribution Guidelines
 
 This project was developed independently as a demonstration of advanced programming concepts. However, contributions, suggestions, and pull requests are welcome.
