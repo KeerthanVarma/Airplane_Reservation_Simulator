@@ -168,9 +168,9 @@ The system emphasizes:
 
 ---
 
-## Author Information
+## Authors Information
 
-**Keerthan Varma**  
+**Keerthan Varma**, **Chaitanya**, ** Avinash Reddy**
 B.Tech, Indian Institute of Technology Gandhinagar  
 Language: C++17  
 Platform: Windows (MinGW)  
