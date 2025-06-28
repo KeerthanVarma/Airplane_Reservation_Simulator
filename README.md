@@ -170,7 +170,7 @@ The system emphasizes:
 
 ## Authors Information
 
-**Keerthan Varma**,**Chaitanya**,**Avinash Reddy**
+**B. Keerthan Varma**,**A. Chaitanya**,**G. Avinash Reddy**
 
 B.Tech, Indian Institute of Technology Gandhinagar  
 Language: C++17  
